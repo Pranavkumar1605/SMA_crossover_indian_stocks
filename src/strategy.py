@@ -14,7 +14,7 @@ def calculate_sma(df, short_window=20, long_window=50):
     return df_copy
 
 
-def gnerate_signals(df):
+def generate_signals(df):
 
     df_copy = df.copy()
 
@@ -48,7 +48,7 @@ if __name__ == "__main__":
 
         df_SMA = calculate_sma(df, short_window=20, long_window=50)
 
-        df_signals = gnerate_signals(df_SMA)
+        df_signals = generate_signals(df_SMA)
 
         print("Example of generated signals:")
         print(df_signals[["Close", "SMA_20", "SMA_50", "Position", "Signal"]].tail(10))
